@@ -6,7 +6,8 @@ WORKDIR /cucumber
 COPY Gemfile .
 
 RUN gem install bundler --source http://rubygems.org &&\
-    bundle install
+    bundle install && \
+    bundle binstubs cucumber
 	
 WORKDIR	/mnt
 
